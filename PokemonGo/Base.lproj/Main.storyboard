@@ -21,19 +21,38 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6TU-eg-IYh">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80y-nz-Uge">
+                                <rect key="frame" x="315" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="17R-km-g5M"/>
+                                    <constraint firstAttribute="height" constant="50" id="7ee-Wh-kso"/>
+                                </constraints>
+                                <state key="normal" image="compass"/>
+                                <connections>
+                                    <action selector="centerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKn-wZ-dJh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6TU-eg-IYh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2k0-wH-r3t"/>
+                            <constraint firstItem="80y-nz-Uge" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4sN-wz-ils"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80y-nz-Uge" secondAttribute="trailing" constant="10" id="4yZ-t3-9r9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6TU-eg-IYh" secondAttribute="bottom" id="Pau-4T-hyo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6TU-eg-IYh" secondAttribute="trailing" id="Tpi-JE-44I"/>
                             <constraint firstItem="6TU-eg-IYh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rVf-eb-W8e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="6TU-eg-IYh" id="FIS-PT-QXx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="compass" width="102.11634063720703" height="102.11634063720703"/>
+    </resources>
 </document>
